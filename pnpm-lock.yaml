@@ -48,8 +48,8 @@ importers:
         specifier: ^3.15.1
         version: 3.15.1(tailwindcss@3.4.1)
       json-editor-vue:
-        specifier: ^0.12.0
-        version: 0.12.0(@lezer/common@1.2.1)(vue@3.3.13)
+        specifier: ^0.13.0
+        version: 0.13.0(@lezer/common@1.2.1)(vue@3.3.13)
       lint-staged:
         specifier: ^15.2.2
         version: 15.2.2
@@ -304,8 +304,8 @@ importers:
         version: 2.4.1
     devDependencies:
       '@0no-co/graphqlsp':
-        specifier: ^1.7.1
-        version: 1.7.1(typescript@5.4.3)
+        specifier: ^1.8.0
+        version: 1.8.0(typescript@5.4.3)
       '@antfu/eslint-config':
         specifier: ^2.12.1
         version: 2.12.1(@vue/compiler-sfc@3.4.21)(eslint@8.57.0)(typescript@5.4.3)(vitest@1.4.0)
@@ -595,8 +595,8 @@ importers:
         version: 1.4.1(graphql@16.8.1)(typescript@5.4.3)
     devDependencies:
       '@0no-co/graphqlsp':
-        specifier: ^1.7.1
-        version: 1.7.1(typescript@5.4.3)
+        specifier: ^1.8.0
+        version: 1.8.0(typescript@5.4.3)
       '@pergel/nuxt':
         specifier: link:../..
         version: link:../..
@@ -811,12 +811,13 @@ packages:
     dependencies:
       graphql: 16.8.1
 
-  /@0no-co/graphqlsp@1.7.1(typescript@5.4.3):
-    resolution: {integrity: sha512-3qSrQegPwjdJH24iaCIb8JP2OtZ3pcO74AQjruTPH632q1/ahAC1+b36y7ynGxb67ikOe+7T3pb+N+Z1+r06Ag==}
+  /@0no-co/graphqlsp@1.8.0(typescript@5.4.3):
+    resolution: {integrity: sha512-DVET7krt1doddpSDg97t41mZZru2P/CWv22JXG4N1oFo1A1KFVGdka/chnn4pmB7/FqRCRUJARGvZNwwb1EJjw==}
     peerDependencies:
       typescript: ^5.0.0
     dependencies:
-      '@gql.tada/internal': 0.1.0
+      '@gql.tada/internal': 0.1.2(graphql@16.8.1)(typescript@5.4.3)
+      graphql: 16.8.1
       node-fetch: 2.7.0
       typescript: 5.4.3
     transitivePeerDependencies:
@@ -3476,13 +3477,6 @@ packages:
       graphql: 16.8.1
       typescript: 5.4.3
 
-  /@gql.tada/internal@0.1.0:
-    resolution: {integrity: sha512-FTvBVXVvt0xUo8hvRlwFoyeNXpUDqc+e20MzFkF8ozbsa5PoYb/gksmmnHMjUphsIq1H3Hq8o4RGstFN5LKH4w==}
-    dependencies:
-      graphql: 16.8.1
-      typescript: 5.4.3
-    dev: true
-
   /@gql.tada/internal@0.1.1(typescript@5.4.3):
     resolution: {integrity: sha512-2TrWcoluLySDBKKoGAGWQzXhiF2Vaz9xyfqsAP25Uz/xKmuFm+Nxpma6oLlwRec7lArNiRu9u7Vi1GjLik1UfA==}
     peerDependencies:
@@ -3490,6 +3484,17 @@ packages:
     dependencies:
       graphql: 16.8.1
       typescript: 5.4.3
+
+  /@gql.tada/internal@0.1.2(graphql@16.8.1)(typescript@5.4.3):
+    resolution: {integrity: sha512-8I4Z1zxYYGK66FWdB3yIZBn3cITLPnciEgjChp3K2+Ha1e/AEBGtZv9AUlodraO/RZafDMkpFhoi+tMpluBjeg==}
+    peerDependencies:
+      graphql: ^16.8.1
+      typescript: ^5.0.0
+    dependencies:
+      '@0no-co/graphql.web': 1.0.5(graphql@16.8.1)
+      graphql: 16.8.1
+      typescript: 5.4.3
+    dev: true
 
   /@graphql-codegen/add@5.0.2(graphql@16.8.1):
     resolution: {integrity: sha512-ouBkSvMFUhda5VoKumo/ZvsZM9P5ZTyDsI8LW18VxSNWOjrTeLXBWHG8Gfaai0HwhflPtCYVABbriEcOmrRShQ==}
@@ -11931,8 +11936,8 @@ packages:
       periscopic: 3.1.0
     dev: true
 
-  /codemirror-wrapped-line-indent@1.0.5(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.26.0):
-    resolution: {integrity: sha512-T6C18nEhWb+k3JD7BhNaYFp9dzpjXM4Oq3jymSYPugZOe5nN64DNWRilkr6iox2sqaQ3PH0D4RVg+Qcv6u1OBg==}
+  /codemirror-wrapped-line-indent@1.0.8(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.26.0):
+    resolution: {integrity: sha512-5UwuHCz4oAZuvot1DbfFxSxJacTESdNGa/KpJD7HfpVpDAJdgB1vV9OG4b4pkJqPWuOfIpFLTQEKS85kTpV+XA==}
     peerDependencies:
       '@codemirror/language': ^6.9.0
       '@codemirror/state': ^6.2.1
@@ -14509,7 +14514,7 @@ packages:
       citty: 0.1.6
       consola: 3.2.3
       defu: 6.1.4
-      node-fetch-native: 1.6.2
+      node-fetch-native: 1.6.4
       nypm: 0.3.8
       ohash: 1.1.3
       pathe: 1.1.2
@@ -15649,8 +15654,8 @@ packages:
       difflib: 0.2.4
       dreamopt: 0.8.0
 
-  /json-editor-vue@0.12.0(@lezer/common@1.2.1)(vue@3.3.13):
-    resolution: {integrity: sha512-VOsWy2EiAUY+iD5zdKssG/lBVVTNbDEgkUWnq4FJbOVNuVXwdRdX76zWvtbhh6MSjlFVCxZc/7V0VEayZbcGeQ==}
+  /json-editor-vue@0.13.0(@lezer/common@1.2.1)(vue@3.3.13):
+    resolution: {integrity: sha512-lxYJgeF9NLuDdju3RgjSC2NdVFoxzIGUTF8nur+9L/YOOuUMmXJCzKM1VyjkdEG6udEK3SQT44mvtgiKrH5ZHA==}
     requiresBuild: true
     peerDependencies:
       '@vue/composition-api': '>=1'
@@ -15659,7 +15664,7 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
-      vanilla-jsoneditor: 0.21.6(@lezer/common@1.2.1)
+      vanilla-jsoneditor: 0.23.1(@lezer/common@1.2.1)
       vue: 3.3.13(typescript@5.4.3)
       vue-demi: 0.14.7(vue@3.3.13)
     transitivePeerDependencies:
@@ -17054,6 +17059,7 @@ packages:
 
   /node-fetch-native@1.6.2:
     resolution: {integrity: sha512-69mtXOFZ6hSkYiXAVB5SqaRvrbITC/NPyqv7yuu/qw0nmgPyYbIMYYNIDhNtwPrzk0ptrimrLz/hhjvm4w5Z+w==}
+    dev: true
 
   /node-fetch-native@1.6.4:
     resolution: {integrity: sha512-IhOigYzAKHd244OC0JIMIUrjzctirCmPkaIfhDeGcEETWof5zKYUW7e7MYvChGWh/4CJeXEgsRyGzuF334rOOQ==}
@@ -21313,8 +21319,8 @@ packages:
     resolution: {integrity: sha512-Z6Uz+TYwEqE7ZN50gwn+1LCVo9ZVrpxRPOhOLnncYkY1ZzOYtrX8Fwf/rFktZ8R5mJms6EZf5TqNOMeZmnPq9Q==}
     engines: {node: '>=12'}
 
-  /vanilla-jsoneditor@0.21.6(@lezer/common@1.2.1):
-    resolution: {integrity: sha512-qKWVW2qXrVazurZ5gZ+Ah7vTkxArUdv6JxlWJJlO3v4K+dowytku4KgfdOEkACpA6HQI2hyHL9GaGnWjwdj4dQ==}
+  /vanilla-jsoneditor@0.23.1(@lezer/common@1.2.1):
+    resolution: {integrity: sha512-HjIAO0XkrvFpUzq8u9MUeUWuweYo2S/+qquEbOW4opQgvDmx5cbayvsCAmqGUaZsV11KebU47BQIRbHWV0n1iA==}
     dependencies:
       '@codemirror/autocomplete': 6.15.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.26.0)(@lezer/common@1.2.1)
       '@codemirror/commands': 6.3.3
@@ -21329,7 +21335,7 @@ packages:
       '@lezer/highlight': 1.2.0
       '@replit/codemirror-indentation-markers': 6.5.1(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.26.0)
       ajv: 8.12.0
-      codemirror-wrapped-line-indent: 1.0.5(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.26.0)
+      codemirror-wrapped-line-indent: 1.0.8(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.26.0)
       diff-sequences: 29.6.3
       immutable-json-patch: 6.0.1
       jmespath: 0.16.0
@@ -21340,13 +21346,13 @@ packages:
       natural-compare-lite: 1.4.0
       sass: 1.72.0
       svelte: 4.2.12
-      vanilla-picker: 2.12.2
+      vanilla-picker: 2.12.3
     transitivePeerDependencies:
       - '@lezer/common'
     dev: true
 
-  /vanilla-picker@2.12.2:
-    resolution: {integrity: sha512-dk0gNeNL9fQFGd1VEhNDQfFlbCqAiksRh1H2tVPlavkH88n/a/y30rXi9PPKrYPTK5kEfPO4xcldt4ts/1wIAg==}
+  /vanilla-picker@2.12.3:
+    resolution: {integrity: sha512-qVkT1E7yMbUsB2mmJNFmaXMWE2hF8ffqzMMwe9zdAikd8u2VfnsVY2HQcOUi2F38bgbxzlJBEdS1UUhOXdF9GQ==}
     dependencies:
       '@sphinxxxx/color-conversion': 2.2.2
     dev: true
